@@ -71,7 +71,7 @@ internal class AnyProcessStep {
         .sorted(by: { left, right in left.date > right.date })
 
       for writer in step.writers {
-        try writer.run(step.items, allItems, outputPath, step.folder ?? "", fileIO)
+        try writer.run(step.items, allItems, inputPath, outputPath, step.folder ?? "", fileIO)
       }
     }
   }

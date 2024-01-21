@@ -4,12 +4,14 @@ public struct ItemRenderingContext<M: Metadata> {
   public let item: Item<M>
   public let items: [Item<M>]
   public let allItems: [AnyItem]
+  public let inputRoot: Path
 }
 
 public struct ItemsRenderingContext<M: Metadata> {
   public let items: [Item<M>]
   public let allItems: [AnyItem]
   public let paginator: Paginator?
+  public let inputRoot: Path
   public let outputPath: Path
 }
 
@@ -19,6 +21,7 @@ public struct PartitionedRenderingContext<T: ContextKey, M: Metadata> {
   public let items: [Item<M>]
   public let allItems: [AnyItem]
   public let paginator: Paginator?
+  public let inputRoot: Path
   public let outputPath: Path
 }
 
